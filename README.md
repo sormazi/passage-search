@@ -50,16 +50,4 @@ Run locally for private files. Upload contents and embeddings are kept in Stream
 
 Supports up to 20 uploaded files, 10 MB per file, 300 pages per PDF, and 3,000 passages total. This is a small-library demo, not a hardened multi-user document platform. Scanned PDFs need OCR; encrypted PDFs are rejected. PDF extraction can alter reading order. English is the primary target language. The app retrieves passages rather than generating answers, and weak semantic matches can still appear.
 
-## Publish on GitHub
 
-Create an empty repository named `passage-search` in your GitHub account, then run from this folder:
-
-```bash
-git init -b main
-git add .
-git commit -m "Build Passage document search app"
-git remote add origin https://github.com/YOUR_USERNAME/passage-search.git
-git push -u origin main
-```
-
-Use only the sample documents in the public repository. Dependencies are bounded in requirements.txt; requirements-tested.txt records the exact environment used for validation.
