@@ -28,8 +28,6 @@ The [Sentence Transformers semantic search example](https://github.com/huggingfa
 - Side-by-side keyword comparison and downloadable evidence JSON.
 - A synthetic benchmark, retrieval tests, and GitHub Actions checks.
 
-This is a new application using Sentence Transformers as a dependency; it is not a fork of the full upstream library, and it does not claim to train a new model. No upstream source files are copied. See [ATTRIBUTION.md](ATTRIBUTION.md).
-
 ## How retrieval works
 
 Text is split into 140-word passages with 30-word overlap, without crossing page boundaries. MiniLM embeds each passage; normalized dot products give cosine similarity. BM25 ranks exact terms. Hybrid search adds `1 / (60 + rank)` from each ranking. The document filter applies before fusion. Raw scores across modes are not comparable and are not confidence probabilities.
